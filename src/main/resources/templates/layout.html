@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" th:fragment="layout">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${pageTitle ?: 'employees'}"></title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+    <link rel="stylesheet" th:href="@{/css/app.css}">
+</head>
+<body>
+    <div th:replace="~{fragments/navbar :: appNavbar}"></div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebarDesktop" class="col-md-3 col-lg-2 sidebar-desktop d-none d-md-block">
+                <div th:replace="~{fragments/sidebar :: sidebarContent}"></div>
+            </nav>
+
+            <div class="offcanvas offcanvas-start d-md-none" tabindex="-1" id="sidebarOffcanvas" aria-labelledby="sidebarOffcanvasLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="sidebarOffcanvasLabel">Rest Teach</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+                </div>
+                <div class="offcanvas-body sidebar-movil">
+                    <div th:replace="~{fragments/sidebar :: sidebarContent}"></div>
+                </div>
+            </div>
+
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 main-content-wrapper p-4">
+                <div layout:fragment="content"></div>
+            </main>
+        </div>
+    </div>
+
+    <script th:src="@{/js/bootstrap.js}"></script>
+</body>
+</html>

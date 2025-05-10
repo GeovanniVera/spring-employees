@@ -1,0 +1,40 @@
+/* Estilos básicos para el sidebar en desktop */
+.sidebar-desktop {
+    background-color: #002218; /* Un color de fondo claro */
+    padding: 20px;
+    min-height: calc(100vh - 56px); /* Altura completa de la ventana menos el navbar (si existe) */
+    border-right: 1px solid #e9ecef; /* Un borde a la derecha */
+    position: sticky; /* Para que el sidebar se mantenga fijo al hacer scroll */
+    top: 0; /* Alineado arriba */
+    left: 0;
+    z-index: 1000; /* Para que esté por encima de otros elementos si es necesario */
+}
+
+.bg-green-002{
+    background-color: #002218; /* Un color de fondo claro */
+
+}
+
+.sidebar-movil{
+    background-color: #002218; /* Un color de fondo claro */
+
+}
+/* Ajuste para el contenido principal cuando el sidebar de escritorio está visible */
+@media (min-width: 768px) { /* Solo aplica en pantallas md (medianas) y superiores */
+    .main-content-wrapper {
+        margin-left: 0; /* Resetear por si viene de una clase que lo mueva */
+        /* Puedes añadir un padding-left si el sidebar no es pegado al borde */
+    }
+}
+
+/* Estilos para el icono de hamburguesa */
+.navbar-toggler-icon-custom {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
