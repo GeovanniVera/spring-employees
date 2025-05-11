@@ -1,12 +1,32 @@
 <!DOCTYPE html>
-<html lang="es" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout}">
-<head>
-    <title>Test</title>
-</head>
-<body>
-    <div layout:fragment="content">
-        <h1>Welcome</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat voluptatibus perspiciatis labore nesciunt sed cumque ab aliquam dolore amet molestias. Voluptate asperiores blanditiis nam, molestias ipsum debitis culpa. Doloribus illo quo obcaecati perspiciatis enim quae totam at, maxime vel exercitationem animi, sequi alias labore similique voluptatem iste culpa rerum dolore omnis natus cum. Esse harum consequatur saepe, deserunt iusto similique repudiandae optio! Molestiae ad magni officia, eligendi qui accusamus debitis, aut maiores fugiat perferendis corrupti natus voluptatum alias, est labore. Culpa nesciunt neque rerum saepe maxime eius, dolores iure doloribus, accusamus similique aperiam veritatis aspernatur! Quidem recusandae optio unde impedit?</p>
-    </div>
-</body>
+<html
+  lang="es"
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  th:fragment="layout"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employees</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}" />
+    <link rel="stylesheet" th:href="@{/css/app.css}" />
+  </head>
+  <body>
+    <!--Encabezado-->
+    <header>
+        <nav class="navbar navbar-expand-md navbar-light border-bottom bg-green-002" th:fragment="appNavbar">
+            <div class="container-fluid ">
+                <a class="navbar-brand link-light link-opacity-50-hover" href="/home"> Rest Teach </a>
+                <a href="/home" class="nav-link link-light link-opacity-10-hover">Home</a>
+            </div>
+        </nav>
+    </header>
+    <!--Contenido principal-->
+    <main>
+        <h1>
+            Employees App
+        </h1>
+    </main>
+  </body>
 </html>

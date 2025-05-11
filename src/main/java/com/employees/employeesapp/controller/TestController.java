@@ -1,19 +1,9 @@
 package com.employees.employeesapp.controller;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-@Controller
-public class HomeController {
-
-    
-
-    @GetMapping("/home")
-    public String home(Model model) {
-        model.addAttribute("pageTitle", "Inicio");
-        return "home";
-    }
+public class TestController {
 
     @GetMapping("/test")
     public String test(Model model) {
